@@ -1,4 +1,4 @@
-# appdash
+# dashbord in vuejs 
 
 ## Project setup
 ```
