@@ -1,0 +1,51 @@
+<template>
+  <div
+    class="card_front"
+    :style="{
+      backgroundImage: `url(${card.coverUrl})`,
+    }"
+  >
+    <h2 class="card_title">
+      <svg
+        height="10pt"
+        viewBox="0 0 420 420"
+        width="10pt"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="m432 240c0 106.039062-85.960938 192-192 192s-192-85.960938-192-192 85.960938-192 192-192 192 85.960938 192 192zm0 0"
+          fill="#cfd2fc"
+        />
+        <path
+          d="m240 480c-132.546875 0-240-107.453125-240-240s107.453125-240 240-240 240 107.453125 240 240c-.148438 132.484375-107.515625 239.851562-240 240zm0-464c-123.710938 0-224 100.289062-224 224s100.289062 224 224 224 224-100.289062 224-224c-.140625-123.652344-100.347656-223.859375-224-224zm0 0"
+          fill="#8690fa"
+        />
+        <path
+          d="m352 240c0 61.855469-50.144531 112-112 112s-112-50.144531-112-112 50.144531-112 112-112 112 50.144531 112 112zm0 0"
+          fill="#5153ff"
+        />
+      </svg>
+      live
+    </h2>
+    <div class="card_location">
+      <span>{{ card.title }}</span>
+      <span class="card_location_icon"><i class="fas fa-camera"></i></span>
+      <span>{{ card.location.liveData }}</span>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    card: {
+      type: Object,
+    },
+  },
+  data() {
+    return {
+      coverSize: `${window.innerWidth}px auto`,
+    };
+  },
+};
+</script>
